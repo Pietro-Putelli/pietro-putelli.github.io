@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "beautiful-react-hooks": "^3.11.1",
     "framer-motion": "^7.3.6",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
