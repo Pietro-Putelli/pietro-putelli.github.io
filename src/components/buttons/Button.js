@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React, { memo, useCallback, useState } from "react";
-import { useNavigate, useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 
 const MenuItem = ({ children, to, background, className }) => {
@@ -22,7 +22,7 @@ const MenuItem = ({ children, to, background, className }) => {
     } else {
       navigate("/" + to);
     }
-  }, [to]);
+  }, [to, navigate]);
 
   return (
     <motion.button
