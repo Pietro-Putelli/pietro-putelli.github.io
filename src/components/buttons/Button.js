@@ -41,20 +41,19 @@ const MenuItem = ({ children, to, className }) => {
       className={className}
       onClick={onClick}
     >
-      <p className="text font-bold uppercase text-xl text-center">
-        <motion.p
-          whileHover={{
-            scale: 1.1,
-          }}
-          transition={{
-            type: "spring",
-            damping: 16,
-          }}
-          animate={{ color: isHover ? "#0052AC" : "#FFF" }}
-        >
-          {children}
-        </motion.p>
-      </p>
+      <motion.p
+        whileHover={{
+          scale: 1.1,
+        }}
+        transition={{
+          type: "spring",
+          damping: 16,
+        }}
+        animate={{ color: isHover ? "#0052AC" : "#FFF" }}
+        className="text font-bold uppercase text-xl text-center"
+      >
+        {children}
+      </motion.p>
     </motion.button>
   );
 };

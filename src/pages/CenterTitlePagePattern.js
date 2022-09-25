@@ -27,7 +27,7 @@ const CenterTitlePagePattern = ({ title, subtitle, buttons }) => {
           <div className="flex md:flex-row flex-col md:w-[95%] justify-between">
             {buttons.map(({ to, title }) => {
               return (
-                <Button className={"md:my-0 my-1"} to={to}>
+                <Button key={title} className={"md:my-0 my-1"} to={to}>
                   {title}
                 </Button>
               );
