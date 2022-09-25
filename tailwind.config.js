@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        audrey: ["Montserrat"],
+        "montserrat-light": ["Montserrat", "light"],
+        "montserrat-regular": ["Montserrat", "regular"],
       },
       colors: {
         main: "#030610",

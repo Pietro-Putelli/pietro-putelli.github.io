@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import React, { memo, useCallback, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useHistory } from "react-router-dom";
+import { twMerge } from "tailwind-merge";
 
-const MenuItem = ({ children, to, className }) => {
+const MenuItem = ({ children, to, background, className }) => {
   const [isHover, setIsHover] = useState(0);
 
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const MenuItem = ({ children, to, className }) => {
     if (to?.includes("https") || to?.includes("mailto")) {
       window.location.replace(to);
     } else {
-      navigate(to);
+      navigate("/" + to);
     }
   }, [to]);
 
@@ -35,21 +36,21 @@ const MenuItem = ({ children, to, className }) => {
         translateY: 0,
         scale: 1,
       }}
-      transition={{ delay: 1 }}
+      transition={{ type: "spring", damping: 16 }}
       onHoverStart={onHoverStart}
       onHoverEnd={onHoverEnd}
-      className={className}
       onClick={onClick}
+      className={twMerge(
+        "text uppercase",
+        className,
+        background ? "bg-second p-4" : ""
+      )}
+      whileHover={{ scale: 1.05, borderRadius: 16 }}
     >
       <motion.p
-        whileHover={{
-          scale: 1.1,
+        animate={{
+          color: isHover ? (background ? "#FFF" : "#0052AC") : "#FFF",
         }}
-        transition={{
-          type: "spring",
-          damping: 16,
-        }}
-        animate={{ color: isHover ? "#0052AC" : "#FFF" }}
         className="text font-bold uppercase text-xl text-center"
       >
         {children}

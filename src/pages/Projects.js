@@ -26,7 +26,9 @@ const Projects = () => {
           <AnimatedSeparator className="my-12" />
         </div>
 
-        <Button to="https://realmoments.it">DISCOVER MORE</Button>
+        <Button background to="https://realmoments.it">
+          DISCOVER MORE
+        </Button>
       </div>
     </div>
   );

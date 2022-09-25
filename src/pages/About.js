@@ -1,5 +1,7 @@
 import React, { memo } from "react";
 import { AnimatedImage, AnimatedText } from "../components/animations";
+import data from "../constants/data";
+import { Button } from "../components/buttons";
 
 const About = () => {
   return (
@@ -23,18 +25,14 @@ const About = () => {
           src={process.env.PUBLIC_URL + "/images/me.png"}
         />
 
-        <div className="md:mx-[8%] mx-0 pb-16">
-          <AnimatedText className="text text-2xl mt-8 text-center normal-case">
-            Hi, my name is Pietro Putelli, I am 20 years old and I live in
-            Italy. I attended scientific high school and then I enrolled in the
-            first year of the University of computer science. Since I’m a
-            creative and ambitious person, passionate about the design and
-            functionality of products, I decided to develop a project and create
-            a business model with the purpose of founding a startup. Therefore a
-            means for expressing my creativity, for the past four years, I
-            studied various programming languages, design psychology and
-            marketing strategies.
+        <div className="md:mx-[16%] flex flex-col mx-0 pb-16">
+          <AnimatedText className="whitespace-pre-line text text-2xl mt-8 text-center uppercase">
+            {data.about.description}
           </AnimatedText>
+
+          <Button to="contacts" className={"mt-8 self-center"} background>
+            Let's get in touch
+          </Button>
         </div>
       </div>
     </div>
