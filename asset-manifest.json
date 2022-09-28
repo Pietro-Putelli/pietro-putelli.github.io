@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "https://pietroputelli.com/static/css/main.f8744de3.css",
-    "main.js": "https://pietroputelli.com/static/js/main.b78b30a9.js",
+    "main.css": "https://pietroputelli.com/static/css/main.eef1755d.css",
+    "main.js": "https://pietroputelli.com/static/js/main.17bee19f.js",
     "index.html": "https://pietroputelli.com/index.html",
-    "main.f8744de3.css.map": "https://pietroputelli.com/static/css/main.f8744de3.css.map",
-    "main.b78b30a9.js.map": "https://pietroputelli.com/static/js/main.b78b30a9.js.map"
+    "main.eef1755d.css.map": "https://pietroputelli.com/static/css/main.eef1755d.css.map",
+    "main.17bee19f.js.map": "https://pietroputelli.com/static/js/main.17bee19f.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8744de3.css",
-    "static/js/main.b78b30a9.js"
+    "static/css/main.eef1755d.css",
+    "static/js/main.17bee19f.js"
   ]
 }
