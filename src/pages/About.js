@@ -1,7 +1,40 @@
 import React, { memo } from "react";
-import { AnimatedImage, AnimatedText } from "../components/animations";
+import {
+  AnimatedImage,
+  AnimatedSeparator,
+  AnimatedText,
+  FadeAnimatedView,
+  HoverAnimatedView,
+} from "../components/animations";
 import data from "../constants/data";
 import { Button } from "../components/buttons";
+
+const COMPTENCES = [
+  {
+    title: "Develop projects and\ndesign products",
+    icon: "💡",
+  },
+  {
+    title: "Javascript\nPython\nSwift",
+    icon: "💻",
+  },
+  {
+    title: "Craft Cocktails",
+    icon: "🍸",
+  },
+  {
+    title: "Travel and\nMeet new People",
+    icon: "🗺️",
+  },
+  {
+    title: "Read about\neverything",
+    icon: "📚",
+  },
+  {
+    title: "Learning NodeJS and Java",
+    icon: "⚙️",
+  },
+];
 
 const About = () => {
   return (
@@ -25,12 +58,27 @@ const About = () => {
           src={process.env.PUBLIC_URL + "/images/me.png"}
         />
 
-        <div className="md:mx-[16%] flex flex-col mx-0 pb-16">
+        <div className="md:mx-[16%] flex items-center flex-col mx-0 pb-16">
           <AnimatedText className="whitespace-pre-line text text-2xl mt-8 text-center uppercase">
             {data.about.description}
           </AnimatedText>
 
-          <Button to="contacts" className={"mt-8 self-center"} background>
+          <AnimatedSeparator />
+
+          <div className="flex flex-row flex-wrap justify-center">
+            {COMPTENCES.map(({ title, icon }) => {
+              return (
+                <HoverAnimatedView className="bg-second w-[10rem] h-[10rem] mx-2 mb-4 px-4 flex center flex-col">
+                  <p className={"text-5xl text-center mb-4"}>{icon}</p>
+                  <p className="text-white tracking-wider text-center whitespace-pre-line uppercase text-sm">
+                    {title}
+                  </p>
+                </HoverAnimatedView>
+              );
+            })}
+          </div>
+
+          <Button to="contacts" className={"mt-12 self-center"} background>
             Let's get in touch
           </Button>
         </div>
