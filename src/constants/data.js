@@ -1,7 +1,7 @@
 const data = {
   home: {
     title: "Pietro Putelli",
-    subtitle: `I'm a Thinker and Designer who loves express his\ncreativity through coding.`,
+    subtitle: `I'm a Thinker and Designer who loves to express his\ncreativity through coding.`,
     buttons: [
       { title: "projects", to: "projects" },
       { title: "about me", to: "about" },
